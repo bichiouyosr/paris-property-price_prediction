@@ -1,0 +1,87 @@
+{
+  "rows_raw": 100000,
+  "rows_modelled": 94567,
+  "n_features": 32,
+  "best_model": "Gradient Boosting",
+  "leaderboard": [
+    {
+      "Model": "Gradient Boosting",
+      "Test MAE (EUR)": 63926.21768679723,
+      "Test RMSE (EUR)": 92105.0109768999,
+      "Test R2": 0.9407691072686942
+    },
+    {
+      "Model": "XGBoost",
+      "Test MAE (EUR)": 63970.211797478056,
+      "Test RMSE (EUR)": 92574.73983204119,
+      "Test R2": 0.9401634202296222
+    },
+    {
+      "Model": "Random Forest",
+      "Test MAE (EUR)": 66364.61143612978,
+      "Test RMSE (EUR)": 95951.65392775582,
+      "Test R2": 0.9357183980312709
+    },
+    {
+      "Model": "Lasso",
+      "Test MAE (EUR)": 76210.46152522319,
+      "Test RMSE (EUR)": 107842.82300485813,
+      "Test R2": 0.9187984616676773
+    },
+    {
+      "Model": "Ridge",
+      "Test MAE (EUR)": 76210.69241824931,
+      "Test RMSE (EUR)": 107843.15285473378,
+      "Test R2": 0.9187979649381308
+    },
+    {
+      "Model": "Linear Regression",
+      "Test MAE (EUR)": 76212.59303647731,
+      "Test RMSE (EUR)": 107846.52104444294,
+      "Test R2": 0.9187928926062731
+    }
+  ],
+  "cv_r2_mean": 0.9408467585297711,
+  "cv_r2_std": 0.0016245664031018744,
+  "interval_80pct": [
+    -97398.3041283741,
+    99384.21280410762
+  ],
+  "error_by_segment": [
+    {
+      "bucket": "Q1 (cheapest)",
+      "n": 3786,
+      "mean_price": 295846.8,
+      "MAE": 30204.0,
+      "MAPE": 10.4
+    },
+    {
+      "bucket": "Q2",
+      "n": 3793,
+      "mean_price": 451828.1,
+      "MAE": 43116.2,
+      "MAPE": 9.6
+    },
+    {
+      "bucket": "Q3",
+      "n": 3775,
+      "mean_price": 595364.0,
+      "MAE": 55606.2,
+      "MAPE": 9.3
+    },
+    {
+      "bucket": "Q4",
+      "n": 3777,
+      "mean_price": 784122.8,
+      "MAE": 72102.8,
+      "MAPE": 9.2
+    },
+    {
+      "bucket": "Q5 (priciest)",
+      "n": 3783,
+      "mean_price": 1270998.7,
+      "MAE": 118679.2,
+      "MAPE": 9.2
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: pip install -e ".[dev]"
+      - name: Unit tests
+        run: pytest -q
+      - name: Pipeline smoke test on synthetic data
+        run: |
+          python scripts/make_synthetic_data.py --rows 5000
+          python scripts/run_pipeline.py --data data/listings_synthetic.csv --no-figures
+      - name: Hyperparameter search smoke test
+        run: python scripts/tune_hyperparameters.py --data data/listings_synthetic.csv --n-iter 3 --cv 2

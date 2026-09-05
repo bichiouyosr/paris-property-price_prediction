@@ -1,0 +1,10 @@
+step,rows,note,retained_pct
+raw,100000,,100.0
+zipcodes repaired,100000,150 set to NaN,100.0
+columns dropped,100000,near-constant: ['city_id'],100.0
+re-listings removed,99848,-152 rows,99.85
+residential only,99450,-398 rows,99.45
+impossible values nulled,99450,,99.45
+market outliers removed,94612,-4838 rows,94.61
+imputed,94612,"NaN left: zipcode (144), energy_certificate_efficiency_score (45364), energy_score_ordinal (45364)",94.61
+2025 listings only,94567,-45 rows,94.57
